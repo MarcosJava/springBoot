@@ -1,0 +1,14 @@
+package springboot;
+
+@Controller
+@EnableAutoConfiguration
+public class HelloWorldController {
+
+	private static List<Person> persons = new ArrayList<Person>();
+	
+    @RequestMapping(value="mrcsFelipe/persons", method={RequestMethod.GET})
+    @ResponseBody
+    String findAll() {
+    	
+        return "Hello World";
+    }
